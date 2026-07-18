@@ -8,8 +8,8 @@
     <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet,noimageindex" />
     <meta name="referrer" content="no-referrer" />
     <title>打开看看</title>
-    <script type="module" crossorigin src="./assets/index-pG-kKyhU.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-EkwOE2j8.css">
+    <script type="module" crossorigin src="./assets/index-BMifys7d.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-qN_Nm0pp.css">
   </head>
   <body>
     <main id="app">
@@ -47,19 +47,25 @@
           <div class="bar-row xp-row"><span>经验</span><div class="bar xp"><i id="xp-fill"></i></div></div>
         </div>
         <div class="run-stats">
-          <div><small>等级</small><b id="level-text">1</b></div><div><small>阶层</small><b id="tier-text">1</b></div><div><small>击破</small><b id="kills-text">0</b></div>
+          <div><small>回合</small><b id="round-text">1</b></div><div><small>等级</small><b id="level-text">1</b></div><div><small>阶层</small><b id="tier-text">1</b></div><div><small>击破</small><b id="kills-text">0</b></div>
         </div>
-        <div id="boss-bar" class="boss-bar hidden"><span>裂隙主宰</span><div><i id="boss-fill"></i></div></div>
+        <div id="boss-bar" class="boss-bar hidden"><span id="boss-name">裂隙主宰</span><div><i id="boss-fill"></i></div></div>
       </section>
+
+      <section id="round-banner" class="round-banner hidden"><small>RIFT COMBAT SEQUENCE</small><h2 id="round-banner-title">回合 1</h2><p id="round-banner-copy">敌机信号正在接近</p></section>
 
       <section id="controls" class="hidden">
         <div id="joystick" aria-label="移动摇杆"><div class="joystick-runes"></div><div id="stick"><i></i></div></div>
-        <div class="skill-buttons"><button id="mode-button" class="skill mode" type="button"><b>⇄</b><small>远程</small></button><button id="dash-button" class="skill dash" type="button"><b>↯</b><small>冲刺</small></button><button id="emp-button" class="skill emp" type="button"><b>◎</b><small>EMP</small></button></div>
+        <div class="combat-cluster">
+          <button id="mode-button" class="skill mode" type="button"><b>⇄</b><small>远程</small></button>
+          <div class="active-skills"><button id="skill-1-button" class="skill active-skill" type="button"><b>Ⅰ</b><small>技能一</small></button><button id="skill-2-button" class="skill active-skill" type="button"><b>Ⅱ</b><small>技能二</small></button><button id="skill-3-button" class="skill active-skill ultimate" type="button"><b>Ⅲ</b><small>技能三</small></button></div>
+          <button id="attack-button" class="attack-button" type="button"><b>攻</b><small>普攻</small></button>
+        </div>
       </section>
       <button id="tutorial-help" class="tutorial-help hidden" type="button" aria-label="查看教程">?</button>
 
       <section id="tutorial-overlay" class="tutorial-overlay hidden">
-        <div class="tutorial-card"><small id="tutorial-step">SYSTEM GUIDE 1 / 4</small><h3 id="tutorial-title">移动机甲</h3><p id="tutorial-copy">拖动左侧摇杆移动，保持走位避开敌人和陷阱。</p><button id="tutorial-next" class="primary-button" type="button">下一步</button></div>
+        <div class="tutorial-card"><small id="tutorial-step">SYSTEM GUIDE 1 / 7</small><h3 id="tutorial-title">移动机甲</h3><p id="tutorial-copy">拖动左侧摇杆移动，保持走位避开敌人和陷阱。</p><button id="tutorial-next" class="primary-button" type="button">下一步</button></div>
       </section>
       <section id="boss-intro" class="boss-intro hidden"><small>WARNING // COLOSSUS SIGNAL</small><h2 id="boss-intro-title">裂隙主宰</h2><p id="boss-intro-copy">高能机甲反应接近</p></section>
 
@@ -70,7 +76,7 @@
 
       <section id="result-screen" class="panel-screen hidden">
         <p class="eyebrow">FINAL COMBAT LOG</p><h2>机甲核心离线</h2>
-        <div class="result-stats"><div><small>抵达等级</small><b id="result-level">1</b></div><div><small>本局击破</small><b id="result-kills">0</b></div><div><small>最高等级</small><b id="best-level">1</b></div></div>
+        <div class="result-stats"><div><small>抵达回合</small><b id="result-level">1</b></div><div><small>本局击破</small><b id="result-kills">0</b></div><div><small>最高回合</small><b id="best-level">1</b></div></div>
         <button id="restart-button" class="primary-button" type="button">重新选择投放</button>
       </section>
 
