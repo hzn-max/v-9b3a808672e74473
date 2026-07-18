@@ -8,13 +8,13 @@
     <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet,noimageindex" />
     <meta name="referrer" content="no-referrer" />
     <title>打开看看</title>
-    <script type="module" crossorigin src="./assets/index-DvJjX8_W.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DFCV1FGI.css">
+    <script type="module" crossorigin src="./assets/index-pG-kKyhU.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-EkwOE2j8.css">
   </head>
   <body>
     <main id="app">
       <div id="scene" aria-label="裂隙机甲无限生存游戏"></div>
-      <div id="damage-flash"></div><div class="scanlines"></div><div class="cinematic-vignette"></div>
+      <div id="damage-flash"></div><div id="cinematic-flash"></div><div class="scanlines"></div><div class="cinematic-vignette"></div>
 
       <section id="start-screen" class="panel-screen">
         <div class="hero-sigil"><i></i><span></span><b></b></div>
@@ -54,8 +54,14 @@
 
       <section id="controls" class="hidden">
         <div id="joystick" aria-label="移动摇杆"><div class="joystick-runes"></div><div id="stick"><i></i></div></div>
-        <div class="skill-buttons"><button id="dash-button" class="skill dash" type="button"><b>↯</b><small>冲刺</small></button><button id="emp-button" class="skill emp" type="button"><b>◎</b><small>EMP</small></button></div>
+        <div class="skill-buttons"><button id="mode-button" class="skill mode" type="button"><b>⇄</b><small>远程</small></button><button id="dash-button" class="skill dash" type="button"><b>↯</b><small>冲刺</small></button><button id="emp-button" class="skill emp" type="button"><b>◎</b><small>EMP</small></button></div>
       </section>
+      <button id="tutorial-help" class="tutorial-help hidden" type="button" aria-label="查看教程">?</button>
+
+      <section id="tutorial-overlay" class="tutorial-overlay hidden">
+        <div class="tutorial-card"><small id="tutorial-step">SYSTEM GUIDE 1 / 4</small><h3 id="tutorial-title">移动机甲</h3><p id="tutorial-copy">拖动左侧摇杆移动，保持走位避开敌人和陷阱。</p><button id="tutorial-next" class="primary-button" type="button">下一步</button></div>
+      </section>
+      <section id="boss-intro" class="boss-intro hidden"><small>WARNING // COLOSSUS SIGNAL</small><h2 id="boss-intro-title">裂隙主宰</h2><p id="boss-intro-copy">高能机甲反应接近</p></section>
 
       <section id="upgrade-screen" class="panel-screen hidden">
         <p class="eyebrow">FRAME EVOLUTION</p><h2 id="upgrade-title">同步等级</h2><div id="upgrade-options"></div>
