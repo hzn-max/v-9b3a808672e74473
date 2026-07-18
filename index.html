@@ -3,26 +3,68 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no" />
-    <meta name="theme-color" content="#03020c" />
+    <meta name="theme-color" content="#030411" />
     <meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noimageindex" />
     <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet,noimageindex" />
     <meta name="referrer" content="no-referrer" />
     <title>打开看看</title>
-    <script type="module" crossorigin src="./assets/index-C8V6zd2Q.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DAAkVLNf.css">
+    <script type="module" crossorigin src="./assets/index-DUZPQ5va.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DJHGaajH.css">
   </head>
   <body>
-    <div id="app">
-      <div class="nebula"></div>
-      <div id="scene" aria-label="互动粒子宇宙"></div>
-      <canvas id="fallback" hidden></canvas>
-      <div id="vignette"></div>
-      <button id="invitation" type="button" aria-label="触摸宇宙">
-        <span class="invitation-ring"></span>
-        <span>触摸宇宙</span>
-        <small>TOUCH THE VOID</small>
-      </button>
-      <div id="status">滑动扰动星尘 · 点击释放能量</div>
-    </div>
+    <main id="app">
+      <div id="scene" aria-label="赛博机甲生存游戏"></div>
+      <div id="damage-flash"></div>
+      <div class="scanlines"></div>
+
+      <section id="start-screen" class="panel-screen">
+        <div class="hero-mark"><span></span><i></i></div>
+        <p class="eyebrow">VOID FRAME // ONLINE</p>
+        <h1>裂隙机甲</h1>
+        <p class="lead">穿越不断变化的赛博荒原<br />击退来袭单位，摧毁裂隙核心</p>
+        <button id="start-button" class="primary-button" type="button">启动机甲</button>
+        <p class="control-tip">左侧移动 · 自动射击 · 右侧释放技能</p>
+      </section>
+
+      <section id="hud" class="hidden" aria-live="polite">
+        <div class="status-bars">
+          <div class="bar-row"><span>装甲</span><div class="bar health"><i id="health-fill"></i></div></div>
+          <div class="bar-row"><span>护盾</span><div class="bar shield"><i id="shield-fill"></i></div></div>
+        </div>
+        <div class="run-stats">
+          <div><small>波次</small><b id="wave-text">1 / 6</b></div>
+          <div><small>剩余</small><b id="timer-text">45s</b></div>
+          <div><small>击破</small><b id="kills-text">0</b></div>
+        </div>
+        <div id="boss-bar" class="boss-bar hidden"><span>裂隙核心</span><div><i id="boss-fill"></i></div></div>
+      </section>
+
+      <section id="controls" class="hidden">
+        <div id="joystick" aria-label="移动摇杆"><div class="joystick-runes"></div><div id="stick"><i></i></div></div>
+        <div class="skill-buttons">
+          <button id="dash-button" class="skill dash" type="button"><b>↯</b><small>冲刺</small></button>
+          <button id="emp-button" class="skill emp" type="button"><b>◎</b><small>EMP</small></button>
+        </div>
+      </section>
+
+      <section id="upgrade-screen" class="panel-screen hidden">
+        <p class="eyebrow">SYSTEM EVOLUTION</p>
+        <h2>选择强化模块</h2>
+        <div id="upgrade-options"></div>
+      </section>
+
+      <section id="result-screen" class="panel-screen hidden">
+        <p class="eyebrow">COMBAT REPORT</p>
+        <h2>机甲已离线</h2>
+        <p id="result-label" class="lead"></p>
+        <div class="result-stats"><div><small>本局击破</small><b id="result-kills">0</b></div><div><small>最高击破</small><b id="best-kills">0</b></div></div>
+        <button id="restart-button" class="primary-button" type="button">重新连接</button>
+      </section>
+
+      <section id="unsupported" class="panel-screen hidden">
+        <h2>设备无法启动机甲</h2>
+        <p class="lead">当前浏览器不支持 WebGL<br />请使用新版微信、Safari 或 Chrome 打开</p>
+      </section>
+    </main>
   </body>
 </html>
